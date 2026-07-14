@@ -123,7 +123,7 @@ public class BoardController {
         PostDto post = getPosts().get(id-1);
 
         model.addAttribute("post", post);
-        return "board/list"; // 템플릿 파일 경로
+        return "board/detail"; // 템플릿 파일 경로
     }
 
     // 게시글 등록 화면을 요청하는 컨트롤러
