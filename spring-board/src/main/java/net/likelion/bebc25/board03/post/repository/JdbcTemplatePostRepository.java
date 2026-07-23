@@ -64,7 +64,6 @@ public class JdbcTemplatePostRepository implements PostRepository {
 
     @Override
     public void deleteById(int id) {
-        jdbcTemplate.update("DELETE FROM post2 WHERE id=? ",
-                id);
+        jdbcTemplate.update("DELETE FROM post2 WHERE id=? ", id);
     }
 }

@@ -15,7 +15,16 @@ import java.util.List;
 @Repository
 public class PureJdbcPostRepository implements PostRepository {
 
-//    @Value("${db.url}") // PostServiceImple 인가.. 어디에도 코드 추가 필요!
+//    @Value("${spring.datasource.url}")
+//    private String url;
+////    private String url = "jdbc:mariadb://localhost:3306/board_db?serverTimezone=UTC&useSSL=false&allowPublicKeyRetrieval=true";
+//
+//    @Value("${spring.datasource.username}")
+//    private String user;
+//    @Value("${spring.datasource.password}")
+//    private String password;
+//
+////    @Value("${db.url}") 형식 // @value 사용할 때 다른 클래스? 어딘가에도 코드 추가 필요?
 
     private String url = "jdbc:mysql://localhost:3306/board_db?serverTimezone=UTC&useSSL=false&allowPublicKeyRetrieval=true";
     private String user = "user1";
