@@ -10,22 +10,22 @@ import java.util.Arrays;
 public class LoggingAspect {
 
     @Pointcut("execution(* net.likelion.bebc25.spring.aop.springaop.*Car.*(..))")
-    private void springaopPackageMethods(){  }
+    private void driverClass(){  }
 
 //    @Before("execution(* net.likelion.bebc25.spring.aop.springaop.*Car.*(..))")
-    @Before("springaopPackageMethods()")
+    @Before("driverClass()")
     public void logBefore(JoinPoint joinPoint){ // 메서드 수행 전에 로그 메시지 출력
         System.out.println("[AOP 로그 before] 메서드 실행 전에 처리할 코드를 작성합니다.");
         Object[] args = joinPoint.getArgs();
         System.out.println(Arrays.toString(args));
     }
 
-    @After("springaopPackageMethods()")
+    @After("driverClass()")
     public void logAfter(){ // 메서드 수행 후에 로그 메시지 출력
         System.out.println("[AOP 로그 after] 메서드 실행 후에 처리할 코드를 작성합니다.");
     }
 
-    @Around("springaopPackageMethods()")
+    @Around("driverClass()")
     public void logAround(ProceedingJoinPoint joinPoint) throws Throwable { // 메서드 수행 전/후에 로그 메시지 출력
         System.out.println("[AOP 로그 around] 메서드 실행 전에 처리할 코드를 작성합니다.");
         joinPoint.proceed(); // 대상 메서드를 호출한다.

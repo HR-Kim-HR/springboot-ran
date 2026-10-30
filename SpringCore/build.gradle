@@ -10,9 +10,9 @@ repositories {
 }
 
 dependencies { // 호환성 문제로 업데이트 버전 함부로 다운로드 받으면 안 되므로 주의!   // 다운로드 버전의 숫자 3개는 메이저.마이너.패치
-    // Source: https://mvnrepository.com/artifact/org.aspectj/aspectjweaver
-    implementation 'org.aspectj:aspectjweaver:1.9.25.1'
-    // Source: https://mvnrepository.com/artifact/org.springframework/spring-context
+    implementation 'jakarta.annotation:jakarta.annotation-api:3.0.0'
+    implementation 'org.springframework:spring-aspects:7.0.8'
+//    implementation 'org.aspectj:aspectjweaver:1.9.25.1'
     implementation 'org.springframework:spring-context:7.0.8'
     testImplementation platform('org.junit:junit-bom:6.0.0')
     testImplementation 'org.junit.jupiter:junit-jupiter'
