@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.time.Duration;
 
+// 어노테이션 관련
 @Controller
 @RequestMapping("/cookie")
 public class CookieController {
